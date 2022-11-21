@@ -50,21 +50,11 @@ for path in ${subdirs[@]}; do
         else
             move="no"
         fi
-        
-        if [ $move = "yes" ]; then
-            for file in ${c_files[@]}; do
-                new_path=`realpath -m "$2/$file"`
-                echo $new_path
-                
-                # Create the new sub-directories if it doesn't exists
-                mkdir -p `dirname $new_path`
-                
-                # Move the files!
-                echo "$file to $new_path"
-                mv $file $new_path
-            done
-        fi
     else
+        move="yes"
+    fi
+    
+    if [ $move = "yes" ]; then
         for file in ${c_files[@]}; do
             new_path=`realpath -m "$2/$file"`
             echo $new_path
