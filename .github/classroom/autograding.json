@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "name": "Problem 1",
+      "setup": "",
+      "run": "./tests/test_prog1.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Problem 2",
+      "setup": "",
+      "run": "./tests/test_prog2.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Problem 3",
+      "setup": "",
+      "run": "./tests/test_prog3.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Problem 4",
+      "setup": "",
+      "run": "./tests/test_prog4.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Problem 5",
+      "setup": "",
+      "run": "./tests/test_prog5.sh",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    }
+  ]
+}
