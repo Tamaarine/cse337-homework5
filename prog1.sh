@@ -36,7 +36,6 @@ subdirs=`find $1 -type d`
 for path in ${subdirs[@]}; do
     c_files=`find $path -maxdepth 1 -type f -name "*.c"`
     length=`find $path -maxdepth 1 -type f -name "*.c" | wc -l`
-    echo $c_files
     if [ $length -gt 3 ]; then
         # Ask user before moving
         echo -e "$c_files"
@@ -57,13 +56,13 @@ for path in ${subdirs[@]}; do
     if [ $move = "yes" ]; then
         for file in ${c_files[@]}; do
             new_path=`realpath -m "$2/$file"`
-            echo $new_path
+            # echo $new_path
             
             # Create the new sub-directories if it doesn't exists
             mkdir -p `dirname $new_path`
             
             # Move the files!
-            echo "$file to $new_path"
+            # echo "$file to $new_path"
             mv $file $new_path
         done
     fi
