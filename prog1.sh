@@ -37,13 +37,11 @@ for path in ${subdirs[@]}; do
     c_files=`find $path -maxdepth 1 -type f -name "*.c"`
     length=`find $path -maxdepth 1 -type f -name "*.c" | wc -l`
     echo $c_files
-    if [ $length -ge 3 ]; then
+    if [ $length -gt 3 ]; then
         # Ask user before moving
         echo -e "$c_files"
         echo -n "Are you sure you want to move all these files? "
         read input
-        
-        move="yes"
         
         if [ -z $input ]; then
             move="no"
