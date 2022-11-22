@@ -51,7 +51,6 @@ END {
     avg/=lines_processed
     print int(avg)
 }
-
 HEREDOC
 
 awk -f awk/temp2 -v in_weights="$in_weights" $1

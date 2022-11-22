@@ -36,7 +36,6 @@ cat << 'HEREDOC' > awk/temp3
             print $1 " : " "D"
     }
 }
-
 HEREDOC
 
 scores=`find ./scores -type f | grep -E "prob4-score[0-9]+.txt"`
