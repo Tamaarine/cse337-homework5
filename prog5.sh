@@ -53,7 +53,7 @@ words_pat='^[a-zA-Z]+$'
 
 position=1
 for word in $words; do
-    stripped=`echo $word | tr -d '[:punct:]' | tr -d '[:digit:]'`
+    stripped=`echo $word | tr -cd '[:alpha:]'`
     stripped=`echo $stripped | tr '[:upper:]' '[:lower:]'`
     if [ ${#stripped} -eq $3 ] && [[ $stripped =~ $words_pat ]]; then
         ret=`awk -F "" -f awk/temp4 -v word=$stripped $2`
